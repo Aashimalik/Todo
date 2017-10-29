@@ -1,0 +1,34 @@
+<!-- <h2>registration </h2>
+<div ng-controller="Acontroller">
+<form>
+    <input type="email" ng-model="body.email"><br>
+    <input type="password" ng-model="body.password">
+<br>
+<button ng-click="submitForm()">submit</button>
+</form>
+</div> -->
+<h1>login page</h1>
+
+<div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                    <form name="myform" ng-submit="myform.$valid && submitForm()" novalidate>
+                    <div class="form-group">
+                    <label for="email">Email</label>
+                     <input id="email" name="email" class="form-control" ng-model="body.email"  required> <br>
+                     <span ng-messages="myform.email.$error" ng-show="myform.$submitted || myform.email.$touched">
+                      <span class="text-danger" ng-message="required">Email is compulsory</span>
+                     </span>
+                      </div>
+                      <div class="form-group">
+                     <label for="password">password</label>
+                     <input id="password" name="password" class="form-control" ng-model="body.password" required> <br>
+                     <span ng-messages="myform.password.$error" ng-show="myform.$submitted || myform.password.$touched">
+                    <span class="text-danger" ng-message="required">password is compulsory</span>
+                    </span>
+                     </div>
+                     <button  class="btn btn-primary">login</button>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
