@@ -2,7 +2,8 @@ var jwt    = require('jsonwebtoken');
 var superSecret = require('../config/config');
 
 jwtVerify=(function(req,res,next){
- var token=req.body.token || req.param('token') || req.headers['token'];
+    console.log('headers',req.headers)
+ var token= req.body.token || req.params.token || req.headers['x-access-token'];
 
  if(token){
      jwt.verify(token,superSecret.secret,function(err,decoded){

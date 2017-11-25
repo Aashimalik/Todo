@@ -1,7 +1,27 @@
-<div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-{{users.name}}
-    </div>
-    </div>
-    </div>
+<div class="container" style="padding:40px">
+    
+    <div class="row">
+		
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+					<h3>Things to do..</h3>
+				   <ul class="event-list">
+				   <li ng-repeat="element in taskArray">
+					<time datetime="{{element.created_date}}">
+				   <span class="day month">{{element.created_date |date:'dd'}}   {{element.created_date |date:'MMM'}}</span>
+					<span class="year">{{element.created_date |date:'yyyy'}}</span>
+					<span class="time">ALL DAY</span>
+					</time>
+				  <div class="info">
+					 <h2 class="title">{{element.name}}</h2>
+				   </div>
+				   </li>
+					</ul>
+				   </div>
+				   <a href="/createTodo"><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+						<i class="material-icons">add</i>
+					  </button></a>
+				   </div>
+				   </div>
+
+
+   
